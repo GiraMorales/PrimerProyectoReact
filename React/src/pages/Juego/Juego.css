@@ -1,0 +1,50 @@
+#juego {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--pjg-color-5);
+  border-radius: 10px;
+  margin-top: 120px;
+}
+.tituloJuego {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 2rem;
+  color: var(--pjg-color-6);
+  text-shadow: 2px 2px 1px var(--pjg-color-4);
+  margin-left: -500px;
+}
+
+#juego img {
+  width: 150%;
+  border-radius: 12px;
+  margin-top: -1000px;
+}
+
+#cargando {
+  margin-top: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: var(--pjg-color-1);
+  font-size: 100px;
+}
+
+.boton-jugar {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2.5rem;
+  background-color: var(--pjg-color-3);
+  color: var(--pjg-color-5);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  height: 100px;
+}
+
+.boton-jugar:hover {
+  background-color: var(--pjg-color-3);
+}
