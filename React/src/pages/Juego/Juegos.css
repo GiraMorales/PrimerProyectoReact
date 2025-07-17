@@ -1,0 +1,83 @@
+#juegos {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  margin-top: 160px;
+}
+
+h2 {
+  color: var(--pjg-color-6);
+  position: absolute;
+  margin-top: -150px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  width: 100%;
+  font-size: 50px;
+  text-shadow: 1px 0px 1px var(--pjg-color-2), 0px 1px 1px var(--pjg-color-3),
+    2px 1px 1px var(--pjg-color-2), 1px 2px 1px var(--pjg-color-3),
+    3px 2px 1px var(--pjg-color-2), 2px 3px 1px var(--pjg-color-3),
+    4px 3px 1px var(--pjg-color-2), 3px 4px 1px var(--pjg-color-3),
+    5px 4px 1px var(--pjg-color-2), 4px 5px 1px var(--pjg-color-3),
+    6px 5px 1px var(--pjg-color-2), 5px 6px 1px var(--pjg-color-3),
+    7px 6px 1px var(--pjg-color-2);
+}
+
+.juegos-grid {
+  margin-top: -60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.juegos-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.juegos-grid img:hover {
+  transform: scale(1.05);
+}
+
+.juegos-grid p {
+  text-align: center;
+  padding: 15px 40px;
+}
+
+h3 {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 15px;
+  background-color: var(--pjg-color-2);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  color: var(--pjg-color-6);
+  /* text-shadow: 2px 2px 1px var(--pjg-color-4); */
+  text-shadow: 1px 0px 1px var(--pjg-color-1), 0px 1px 1px var(--pjg-color-3),
+    2px 1px 1px var(--pjg-color-1), 1px 2px 1px var(--pjg-color-3),
+    3px 2px 1px var(--pjg-color-1), 2px 3px 1px var(--pjg-color-3),
+    4px 3px 1px var(--pjg-color-1);
+}
+
+p {
+  color: var(--pjg-color-2);
+  /* text-shadow: 2px 2px 1px var(--pjg-color-4); */
+  text-shadow: 1px 0px 1px var(--pjg-color-6), 0px 1px 1px var(--pjg-color-3),
+    2px 1px 1px var(--pjg-color-6), 1px 2px 1px var(--pjg-color-2),
+    3px 2px 1px var(--pjg-color-6), 2px 3px 1px var(--pjg-color-2),
+    4px 3px 1px var(--pjg-color-6);
+  font-size: 18px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 12%;
+  background-color: var(--pjg-color-6);
+  border-radius: 10px;
+
+  height: 35%;
+}
