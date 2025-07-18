@@ -10,6 +10,7 @@ const Juego = () => {
 
   useEffect(() => {
     setLoading(true);
+    // document.body.classList.add('sin-scroll');
     fetch(
       `https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/game?id=${id}`
     )
@@ -18,9 +19,18 @@ const Juego = () => {
         setJuego(res);
         setLoading(false);
       });
+    // return () => {
+    //   document.body.classList.remove('sin-scroll');
+    // };
   }, [id]);
 
-  if (loading) return <p id='cargando'>Cargando juego...</p>;
+  if (loading)
+    return (
+      <div className='loading'>
+        <img src='/assets/loading.gif' />
+      </div>
+    );
+
   if (error) return <p style={{ color: 'red' }}>{error}</p>;
   if (!juego) return <p>No se encontró el juego.</p>;
 

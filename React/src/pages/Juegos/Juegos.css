@@ -58,7 +58,6 @@ h3 {
   justify-content: center;
   margin-top: 20px;
   color: var(--pjg-color-6);
-  /* text-shadow: 2px 2px 1px var(--pjg-color-4); */
   text-shadow: 1px 0px 1px var(--pjg-color-1), 0px 1px 1px var(--pjg-color-3),
     2px 1px 1px var(--pjg-color-1), 1px 2px 1px var(--pjg-color-3),
     3px 2px 1px var(--pjg-color-1), 2px 3px 1px var(--pjg-color-3),
@@ -67,7 +66,6 @@ h3 {
 
 p {
   color: var(--pjg-color-5);
-  /* text-shadow: 2px 2px 1px var(--pjg-color-4); */
   text-shadow: 1px 0px 1px var(--pjg-color-6), 0px 1px 1px var(--pjg-color-2),
     2px 1px 1px var(--pjg-color-6), 1px 2px 1px var(--pjg-color-2),
     3px 2px 1px var(--pjg-color-6), 2px 3px 1px var(--pjg-color-2),
@@ -78,6 +76,12 @@ p {
   margin-bottom: 12%;
   background-color: var(--pjg-color-6);
   border-radius: 10px;
-
   height: 35%;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  height: 70svh;
+  margin-top: 10px;
 }

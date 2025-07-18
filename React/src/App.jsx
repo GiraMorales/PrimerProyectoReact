@@ -4,8 +4,10 @@ import { Background } from './components/Background/Background';
 import { Header } from './components/Header/Header';
 import Juego from './pages/Juego/Juego';
 import Juegos from './pages/Juegos/Juegos';
+import { useBodyClassOnPath } from './Hooks/useBodyClassOnPath';
 
 function App() {
+  useBodyClassOnPath('/game/', 'sin-scroll');
   return (
     <>
       <Header />

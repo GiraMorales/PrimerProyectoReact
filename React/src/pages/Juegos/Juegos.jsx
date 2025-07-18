@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 
 const Juegos = () => {
   //www.freetogame.com/api/games
-
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -18,6 +17,13 @@ const Juegos = () => {
         setLoading(false);
       });
   }, []);
+
+  if (loading)
+    return (
+      <div className='loading'>
+        <img src='/assets/loading.gif' />
+      </div>
+    );
 
   return (
     <main id='juegos'>
