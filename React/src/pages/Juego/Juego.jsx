@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './Juego.css';
+import Loading from '../../components/Loading/Loading';
 
 const Juego = () => {
   const { id } = useParams();
@@ -10,39 +11,34 @@ const Juego = () => {
 
   useEffect(() => {
     setLoading(true);
-    // document.body.classList.add('sin-scroll');
+    setError(null);
     fetch(
       `https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/game?id=${id}`
     )
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('No se pudo obtener el juego');
+        }
+        return res.json();
+      })
       .then((res) => {
         setJuego(res);
         setLoading(false);
+      })
+      .catch((err) => {
+        setError('Error al cargar el juego. Intenta de nuevo más tarde.');
+        setLoading(false);
       });
-    // return () => {
-    //   document.body.classList.remove('sin-scroll');
-    // };
   }, [id]);
 
-  if (loading)
-    return (
-      <div className='loading'>
-        <img src='/assets/loading.gif' />
-      </div>
-    );
-
+  if (loading) return <Loading />;
   if (error) return <p style={{ color: 'red' }}>{error}</p>;
   if (!juego) return <p>No se encontró el juego.</p>;
 
   return (
     <main id='juego'>
       <h2 className='tituloJuego'>{juego.title}</h2>
-      <iframe
-        src={juego.game_url}
-        title={juego.title}
-        width={'100%'}
-        height={'600px'}
-      >
+      <iframe src={juego.game_url} title={juego.title}>
         Tu navegador no soporta iframes
       </iframe>
       {/* Alternativa si el iframe no funciona */}

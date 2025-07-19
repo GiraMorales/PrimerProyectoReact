@@ -8,16 +8,6 @@
   border-radius: 10px;
   margin-top: 90px;
 }
-.tituloJuego {
-  display: flex;
-  align-items: center;
-  font-size: 300%;
-  width: 100%;
-  color: var(--pjg-color-6);
-  text-shadow: 2px 2px 1px var(--pjg-color-4);
-  margin-left: -350px;
-  margin-top: -7%;
-}
 
 .boton-jugar {
   display: inline-block;
@@ -30,6 +20,7 @@
   transition: background-color 0.3s;
   height: 5%;
   margin-bottom: -10%;
+  margin-bottom: 1rem;
 }
 
 .boton-jugar:hover {
@@ -42,6 +33,29 @@ iframe {
   border-radius: 3%;
 }
 
-/* body.sin-scroll {
-  overflow-x: hidden;
-} */
+@media screen and (max-width: 860px) {
+  iframe {
+    height: 60svh;
+    width: 100%;
+    border-radius: 3%;
+  }
+  .boton-jugar {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #juego {
+    max-width: 80%;
+    background: none;
+    margin-top: 32%;
+  }
+
+  iframe {
+    height: 60svh;
+    width: 100%;
+    border-radius: 3%;
+    margin: 5% 0%;
+  }
+}

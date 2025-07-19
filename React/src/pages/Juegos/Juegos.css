@@ -7,8 +7,9 @@
 
 h2 {
   color: var(--pjg-color-6);
-  position: absolute;
-  margin-top: -150px;
+  position: static;
+  margin-top: -100px;
+  margin-bottom: 3%;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -22,6 +23,10 @@ h2 {
     5px 4px 1px var(--pjg-color-2), 4px 5px 1px var(--pjg-color-3),
     6px 5px 1px var(--pjg-color-2), 5px 6px 1px var(--pjg-color-3),
     7px 6px 1px var(--pjg-color-2);
+}
+
+#juegos h2 {
+  margin-top: -150px;
 }
 
 .juegos-grid {
@@ -76,12 +81,24 @@ p {
   margin-bottom: 12%;
   background-color: var(--pjg-color-6);
   border-radius: 10px;
-  height: 35%;
 }
 
-.loading {
-  display: flex;
-  justify-content: center;
-  height: 70svh;
-  margin-top: 10px;
+@media screen and (max-width: 860px) {
+  #juegos h2 {
+    margin-top: -18%;
+    margin-bottom: 10%;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #juegos h2 {
+    margin-top: -30%;
+  }
+  #juegos {
+    width: 80%;
+    height: 8%;
+    margin-top: 150px;
+    margin-left: 50px;
+  }
 }

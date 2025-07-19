@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Juegos.css';
 import { useState, useEffect } from 'react';
+import Loading from '../../components/Loading/Loading';
 
 const Juegos = () => {
   //www.freetogame.com/api/games
@@ -18,12 +19,7 @@ const Juegos = () => {
       });
   }, []);
 
-  if (loading)
-    return (
-      <div className='loading'>
-        <img src='/assets/loading.gif' />
-      </div>
-    );
+  if (loading) return <Loading />;
 
   return (
     <main id='juegos'>
