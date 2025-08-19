@@ -1,0 +1,13 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  height: 70svh;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .loading {
+    height: 30svh;
+    margin-top: 200px;
+  }
+}

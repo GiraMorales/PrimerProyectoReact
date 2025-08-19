@@ -1,0 +1,68 @@
+#juegos {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 160px;
+}
+
+#juegos h2 {
+  margin-top: -150px;
+}
+
+.juegos-grid {
+  margin-top: -60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.juegos-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.juegos-grid img:hover {
+  transform: scale(1.05);
+}
+
+.juegos-grid p {
+  text-align: center;
+  padding: 5px 30px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  margin: 0 2px;
+  width: 30px;
+  font-size: 20px;
+  background-color: var(--pjg-color-3);
+  color: var(--pjg-color-1);
+}
+
+@media screen and (max-width: 860px) {
+  #juegos h2 {
+    margin-top: -18%;
+    margin-bottom: 10%;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #juegos h2 {
+    margin-top: -30%;
+  }
+  #juegos {
+    width: 80%;
+    height: 8%;
+    margin-top: 150px;
+    margin-left: 50px;
+  }
+}
