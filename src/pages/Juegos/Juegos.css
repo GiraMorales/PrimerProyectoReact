@@ -1,16 +1,10 @@
 #juegos {
-  position: absolute;
   width: 100%;
   min-height: 100vh;
-  margin-top: 160px;
-}
-
-#juegos h2 {
-  margin-top: -150px;
+  margin-top: 20px;
 }
 
 .juegos-grid {
-  margin-top: -60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
@@ -29,7 +23,7 @@
 
 .juegos-grid p {
   text-align: center;
-  padding: 5px 30px;
+  padding: 5px;
 }
 
 .pagination {
@@ -49,20 +43,15 @@
 
 @media screen and (max-width: 860px) {
   #juegos h2 {
-    margin-top: -18%;
     margin-bottom: 10%;
     font-size: 3rem;
   }
 }
 
 @media screen and (max-width: 750px) {
-  #juegos h2 {
-    margin-top: -30%;
-  }
   #juegos {
     width: 80%;
     height: 8%;
-    margin-top: 150px;
     margin-left: 50px;
   }
 }
